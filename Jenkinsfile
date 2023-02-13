@@ -12,5 +12,11 @@ pipeline {
                 stash(name: 'compiled-results', includes: 'sources/*.py*')
             }
         }
+	stage('mybranch') {
+            agent any
+            steps {
+                echo 'branch mybranch'
+            }
+        }
     }
 }
